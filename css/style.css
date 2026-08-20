@@ -314,7 +314,7 @@ main {
 
 .hero h1 {
   margin: 0;
-  max-width: 14ch;
+  max-width: 15ch;
   font-family: var(--font-display);
   font-size: clamp(2.35rem, 7vw, 4.5rem);
   font-weight: 800;
@@ -372,8 +372,25 @@ main {
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 0.75rem;
   margin-top: 2rem;
+}
+
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 3rem;
+  padding: 0.6rem 0.35rem;
+  color: var(--mint);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.text-link:hover {
+  color: var(--text);
+  transform: translateX(3px);
 }
 
 .button {
@@ -623,6 +640,7 @@ main {
 .section {
   padding: var(--space-section) 0;
   border-top: 1px solid var(--line-soft);
+  scroll-margin-top: 4.5rem;
 }
 
 .section-eyebrow {
@@ -652,11 +670,57 @@ main {
   margin-top: 2rem;
 }
 
+.about-copy {
+  display: grid;
+  gap: 1rem;
+}
+
 .about-text {
   margin: 0;
   max-width: 40rem;
   color: var(--muted);
   font-size: clamp(1rem, 2.4vw, 1.08rem);
+}
+
+.about-text-lead {
+  color: var(--text);
+  font-size: clamp(1.12rem, 2.8vw, 1.28rem);
+  line-height: 1.55;
+}
+
+.profile-principles {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.profile-principles > div {
+  display: grid;
+  grid-template-columns: 2.25rem 1fr;
+  gap: 0.85rem;
+  align-items: start;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  background: var(--surface);
+}
+
+.profile-principles span {
+  color: var(--mint);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+}
+
+.profile-principles p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.93rem;
+  line-height: 1.55;
+}
+
+.profile-principles strong {
+  color: var(--text);
+  font-weight: 600;
 }
 
 .skill-cloud {
@@ -784,6 +848,27 @@ main {
   font-weight: 500;
 }
 
+.timeline-affiliation {
+  margin: -0.35rem 0 0.9rem;
+  color: var(--muted);
+  font-size: 0.84rem;
+  font-style: italic;
+}
+
+.timeline-points {
+  display: grid;
+  gap: 0.55rem;
+  margin: 0;
+  padding-left: 1.15rem;
+  color: var(--muted);
+  font-size: 0.94rem;
+  line-height: 1.58;
+}
+
+.timeline-points li::marker {
+  color: var(--mint);
+}
+
 .timeline-body p:last-child {
   margin: 0;
   color: var(--muted);
@@ -882,6 +967,137 @@ main {
 .bento-featured-footer .bento-meta,
 .bento-featured-footer .bento-link {
   margin-top: 0;
+}
+
+.rag-flow {
+  display: grid;
+  grid-template-columns: auto 1fr auto 1fr auto 1fr auto;
+  align-items: center;
+  gap: 0.55rem;
+  width: 100%;
+  margin-bottom: 2.5rem;
+}
+
+.rag-flow span {
+  display: grid;
+  place-items: center;
+  min-width: 4.25rem;
+  min-height: 4.25rem;
+  padding: 0.5rem;
+  border: 1px solid rgba(94, 234, 212, 0.24);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 35% 25%, rgba(94, 234, 212, 0.15), transparent 58%),
+    rgba(255, 255, 255, 0.035);
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 0.69rem;
+  text-transform: uppercase;
+}
+
+.rag-flow i {
+  position: relative;
+  height: 1px;
+  background: linear-gradient(90deg, var(--mint), var(--violet));
+}
+
+.rag-flow i::after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  right: 0;
+  width: 6px;
+  height: 6px;
+  border-top: 1px solid var(--violet);
+  border-right: 1px solid var(--violet);
+  transform: rotate(45deg);
+}
+
+/* ---------- selected systems ---------- */
+
+.system-showcase {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.showcase-card {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 19rem;
+  padding: clamp(1.35rem, 4vw, 1.75rem);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(160deg, rgba(94, 234, 212, 0.06), transparent 45%),
+    var(--surface);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transition: border-color 0.25s, transform 0.25s, background 0.25s;
+}
+
+.showcase-card::before {
+  content: "";
+  position: absolute;
+  right: -3rem;
+  bottom: -4rem;
+  width: 11rem;
+  height: 11rem;
+  border: 1px solid rgba(167, 139, 250, 0.18);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 2rem rgba(167, 139, 250, 0.025),
+    0 0 0 4rem rgba(94, 234, 212, 0.018);
+  pointer-events: none;
+}
+
+.showcase-card:hover {
+  border-color: rgba(94, 234, 212, 0.34);
+  background:
+    linear-gradient(160deg, rgba(94, 234, 212, 0.1), transparent 48%),
+    var(--surface-strong);
+  transform: translateY(-4px);
+}
+
+.showcase-index {
+  margin: 0 0 2rem;
+  color: var(--coral);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.showcase-card h3 {
+  margin: 0;
+  max-width: 14ch;
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  line-height: 1.16;
+}
+
+.showcase-card > p:not(.showcase-index) {
+  margin: 0.9rem 0 1.5rem;
+  color: var(--muted);
+  font-size: 0.94rem;
+  line-height: 1.62;
+}
+
+.showcase-outcome {
+  position: relative;
+  z-index: 1;
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line-soft);
+  color: var(--mint);
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+}
+
+.toolkit-section .skill-cloud {
+  margin-top: 2rem;
 }
 
 /* ---------- contact ---------- */
@@ -988,6 +1204,10 @@ main {
   .bento-featured {
     grid-column: span 2;
   }
+
+  .system-showcase {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media (min-width: 960px) {
@@ -1006,6 +1226,10 @@ main {
 
   .bento-featured h3 {
     font-size: 1.65rem;
+  }
+
+  .expertise-grid .bento-featured {
+    justify-content: space-between;
   }
 }
 
@@ -1031,8 +1255,21 @@ main {
     padding-top: 2.75rem;
   }
 
+  .dynamic-role {
+    min-height: 0;
+  }
+
+  .dynamic-role::after {
+    display: none;
+  }
+
   .hero-actions .button {
     flex: 1 1 100%;
+  }
+
+  .hero-actions .text-link {
+    width: 100%;
+    justify-content: center;
   }
 
   .hero-stats {
@@ -1041,6 +1278,23 @@ main {
 
   .signal-bars {
     height: 2.8rem;
+  }
+
+  .rag-flow {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.45rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .rag-flow span {
+    min-width: 0;
+    min-height: 3.2rem;
+    border-radius: 0.85rem;
+    font-size: 0.58rem;
+  }
+
+  .rag-flow i {
+    display: none;
   }
 
   .cursor-orb {

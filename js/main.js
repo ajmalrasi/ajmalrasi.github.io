@@ -41,12 +41,13 @@ window.addEventListener("scroll", updateScrollState, { passive: true });
 updateScrollState();
 
 const phrases = [
-  "and shipping it to production.",
-  "in cars, cabins, and cameras.",
-  "on Jetson, SOCs, and the edge.",
-  "at petabyte scale in the cloud."
+  "from retrieval to runtime.",
+  "for petabyte-scale data.",
+  "that see, reason, and scale.",
+  "from cloud to edge."
 ];
 const role = document.querySelector(".dynamic-role");
+const animateRole = !prefersReducedMotion && window.matchMedia("(min-width: 641px)").matches;
 let phraseIndex = 0;
 let charIndex = 0;
 let deleting = false;
@@ -106,7 +107,7 @@ function typeRole() {
   window.setTimeout(typeRole, 260);
 }
 
-if (role && !prefersReducedMotion) {
+if (role && animateRole) {
   lockDynamicRoleHeight();
   role.textContent = "";
   requestAnimationFrame(() => {
@@ -118,10 +119,10 @@ if (role && !prefersReducedMotion) {
 }
 
 const commands = [
-  "detect --faces --realtime",
-  "quantize --int8 --tensorrt",
-  "deploy --target=jetson",
-  "scale --pipeline petabytes"
+  "rag.evaluate --faithfulness",
+  "retrieve --index=ivf --multimodal",
+  "observe --traces --quality --cost",
+  "scale --pipeline=petabytes"
 ];
 const typedCommand = document.querySelector(".typed-command");
 let commandIndex = 0;
