@@ -6,7 +6,7 @@
     <title>Ajmal Rasi · Senior Applied AI Engineer</title>
     <meta
       name="description"
-      content="Senior Applied AI Engineer building production GenAI, multimodal RAG, AI evaluation, data platforms, computer vision, and edge AI systems."
+      content="Senior Applied AI Engineer building agentic RAG systems, edge LLM inference on NVIDIA Jetson, and production computer vision and data platforms."
     />
     <meta name="author" content="Ajmal Rasi" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -22,7 +22,7 @@
     <meta property="og:title" content="Ajmal Rasi · Senior Applied AI Engineer" />
     <meta
       property="og:description"
-      content="Production GenAI, multimodal RAG, AI evaluation, petabyte-scale data platforms, and computer vision from cloud to edge."
+      content="Agentic AI, multimodal RAG, edge LLM inference, open-source contributions, and production computer vision."
     />
     <meta property="og:url" content="https://ajmalrasi.com/" />
     <meta property="og:locale" content="en_IN" />
@@ -39,7 +39,7 @@
     <meta name="twitter:title" content="Ajmal Rasi · Senior Applied AI Engineer" />
     <meta
       name="twitter:description"
-      content="Production GenAI, multimodal RAG, AI evaluation, petabyte-scale data platforms, and computer vision from cloud to edge."
+      content="Agentic AI, multimodal RAG, edge LLM inference, open-source contributions, and production computer vision."
     />
     <meta name="twitter:image" content="https://ajmalrasi.com/og-image.png" />
     <meta name="twitter:image:alt" content="Ajmal Rasi, Senior Applied AI Engineer" />
@@ -77,7 +77,7 @@
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#expertise">Expertise</a></li>
-          <li><a href="#experience">Work</a></li>
+          <li><a href="#systems">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -95,7 +95,7 @@
             <span class="gradient-text dynamic-role" aria-live="polite">from retrieval to runtime.</span>
           </h1>
           <p class="hero-lead" itemprop="description">
-            Seven years across GenAI, LLM systems, computer vision, and distributed data platforms. I turn complex, unstructured data into reliable products that perform at scale.
+            Seven years building production AI systems. My recent work spans agentic RAG over seismic data, local LLM inference on NVIDIA Jetson, and upstream open-source contributions.
           </p>
           <div class="hero-actions">
             <a class="button button-primary" href="/resume/Ajmal_Rasi_Resume.pdf" target="_blank" rel="noopener noreferrer">
@@ -163,10 +163,10 @@
         <div class="about-layout">
           <div class="about-copy reveal">
             <p class="about-text about-text-lead">
-              I design and scale production GenAI and LLM ecosystems, with a focus on multimodal RAG, structured extraction, retrieval quality, and trustworthy evaluation.
+              I build agentic AI systems that retrieve evidence, use tools, extract structured data, and validate their outputs. At TGS, I apply that approach to multimodal search across petabyte-scale seismic data.
             </p>
             <p class="about-text">
-              My foundation is in C++ and computer vision, including segmentation, detection, tracking, and foundation models. I extend that work through edge inference, distributed systems, and cloud platforms. That breadth lets me solve the whole problem: data, model, evaluation, infrastructure, and runtime performance.
+              My foundation is in C++ and computer vision. More recently, I have worked on edge LLM serving with TensorRT Edge-LLM, continuous batching, chunked prefill, and measured latency and throughput on Jetson Orin. I work across data, model, evaluation, infrastructure, and runtime performance.
             </p>
           </div>
 
@@ -210,11 +210,11 @@
               <span>Vector Search</span>
               <span>LLMs</span>
             </div>
-            <h3>Production GenAI &amp; RAG</h3>
+            <h3>Agentic AI &amp; RAG</h3>
             <p>
-              End-to-end retrieval systems over complex enterprise data: chunking and embeddings, IVF/FAISS vector search, tool orchestration, structured extraction, prompt engineering, and transformer-based workflows.
+              LangGraph workflows that connect retrieval, tool calls, structured extraction, and validation over complex enterprise data, backed by embeddings and IVF/FAISS vector search.
             </p>
-            <span class="bento-meta">From context engineering to deployment</span>
+            <span class="bento-meta">From retrieval to validated answers</span>
           </article>
 
           <article class="bento-card reveal tilt-card" style="--delay: 0.05s">
@@ -230,9 +230,9 @@
           </article>
 
           <article class="bento-card reveal tilt-card" style="--delay: 0.15s">
-            <div class="bento-tags"><span>TensorRT</span><span>ONNX</span><span>Jetson</span><span>C++</span></div>
-            <h3>Computer Vision &amp; Edge AI</h3>
-            <p>Detection, tracking, segmentation, camera systems, and low-latency deployment through quantization, pruning, profiling, and hardware-aware optimization.</p>
+            <div class="bento-tags"><span>TensorRT Edge-LLM</span><span>Jetson Orin</span><span>INT4 AWQ</span></div>
+            <h3>Edge LLM &amp; Vision Inference</h3>
+            <p>Local Qwen3.5-4B serving on Jetson Orin, with continuous batching, chunked prefill, and request scheduling. Earlier edge vision work spans TensorRT, ONNX, DeepStream, and automotive SoCs.</p>
           </article>
 
           <article class="bento-card reveal tilt-card" style="--delay: 0.2s">
@@ -246,27 +246,45 @@
       <section id="systems" class="section">
         <div class="section-head reveal">
           <p class="section-eyebrow">03 · Selected systems</p>
-          <h2>Complex problems, built into working systems.</h2>
+          <h2>Systems I built and work I shared.</h2>
         </div>
 
         <div class="system-showcase">
           <article class="showcase-card reveal tilt-card">
-            <p class="showcase-index">01 / Multimodal AI</p>
+            <p class="showcase-index">01 / Agentic AI</p>
             <h3>Seismic AI assistant</h3>
-            <p>Integrated ViT/MAE computer vision with LLMs to enable semantic search, fault segmentation, and intelligent metadata extraction across petabyte-scale seismic datasets.</p>
-            <div class="showcase-outcome">Vision + language + high-volume domain data</div>
+            <p>Combined ViT/MAE and LLMs with multi-step retrieval, tool calling, structured extraction, and validation over unstructured seismic metadata.</p>
+            <div class="showcase-outcome">Agentic RAG over petabyte-scale data</div>
           </article>
           <article class="showcase-card reveal tilt-card" style="--delay: 0.06s">
-            <p class="showcase-index">02 / Trustworthy AI</p>
-            <h3>Evaluation &amp; observability framework</h3>
-            <p>Built systematic LLM evaluation with RAGAS and operational monitoring with OTLP/Grafana to track faithfulness, retrieval quality, hallucinations, latency, throughput, and cost.</p>
-            <div class="showcase-outcome">Quality signals made operational</div>
+            <p class="showcase-index">02 / Edge LLM</p>
+            <h3>Continuous batching on Jetson</h3>
+            <p>Submitted native two-sequence continuous batching and chunked prefill to NVIDIA TensorRT Edge-LLM. A qualified Jetson Orin test in the open pull request reports 22.54 to 33.97 output tokens/s.</p>
+            <div class="showcase-outcome"><a href="https://github.com/NVIDIA/TensorRT-Edge-LLM/pull/215" target="_blank" rel="noopener noreferrer">View upstream pull request ↗</a></div>
           </article>
           <article class="showcase-card reveal tilt-card" style="--delay: 0.12s">
-            <p class="showcase-index">03 / Edge intelligence</p>
-            <h3>Real-time vision on constrained hardware</h3>
-            <p>Deployed driver monitoring, video analytics, and tracking pipelines across NXP and Samsung automotive SOCs and NVIDIA Jetson using TensorRT, ONNX, DeepStream, and INT8/FP16 optimization.</p>
+            <p class="showcase-index">03 / Local AI</p>
+            <h3>OpenClaw model service</h3>
+            <p>Built a shared OpenAI-compatible model endpoint across Jetson, an RTX laptop, and an AWS GPU host, using TensorRT Edge-LLM and vLLM backends with documented deployment and benchmarks.</p>
+            <div class="showcase-outcome"><a href="https://github.com/ajmalrasi/openclaw" target="_blank" rel="noopener noreferrer">Explore the project ↗</a></div>
+          </article>
+          <article class="showcase-card reveal tilt-card" style="--delay: 0.04s">
+            <p class="showcase-index">04 / Trustworthy AI</p>
+            <h3>Evaluation &amp; observability</h3>
+            <p>Built LLM evaluation with RAGAS and operational monitoring with OTLP/Grafana for faithfulness, retrieval quality, hallucinations, latency, throughput, and cost.</p>
+            <div class="showcase-outcome">Quality signals made operational</div>
+          </article>
+          <article class="showcase-card reveal tilt-card" style="--delay: 0.08s">
+            <p class="showcase-index">05 / Edge vision</p>
+            <h3>Real-time vision systems</h3>
+            <p>Deployed driver monitoring, video analytics, and tracking across automotive SoCs and NVIDIA Jetson using TensorRT, ONNX, DeepStream, and INT8/FP16 optimization.</p>
             <div class="showcase-outcome">Low-latency inference from car cabin to CCTV</div>
+          </article>
+          <article class="showcase-card reveal tilt-card" style="--delay: 0.12s">
+            <p class="showcase-index">06 / Open source</p>
+            <h3>Label Studio Converter</h3>
+            <p>Contributed a fix for COCO JSON conversion failures in HumanSignal's Label Studio Converter. The upstream pull request was merged in May 2024.</p>
+            <div class="showcase-outcome"><a href="https://github.com/HumanSignal/label-studio-converter/pull/290" target="_blank" rel="noopener noreferrer">View merged contribution ↗</a></div>
           </article>
         </div>
       </section>
@@ -289,7 +307,7 @@
               <p class="timeline-org">TGS (Steerwise) · Remote, India</p>
               <p class="timeline-affiliation">Via Affine Analytics, Jul 2022 to Jun 2024; direct with Steerwise, Jul 2024 to Present</p>
               <ul class="timeline-points">
-                <li>Architected multimodal AI and production RAG systems for semantic search, fault segmentation, structured extraction, and natural-language access to seismic metadata.</li>
+                <li>Architected multimodal AI and LangGraph workflows for multi-step retrieval, tool calls, structured extraction, and validation over seismic metadata.</li>
                 <li>Built an AI evaluation and observability framework using RAGAS, OTLP, and Grafana.</li>
                 <li>Scaled SEG-Y ingestion and distributed processing across petabyte-scale datasets with Dask, NumPy, and GeoPandas.</li>
                 <li>Operated cloud-native data platforms across GCP and AWS with Kubernetes, Airflow, serverless execution, event-driven messaging, and CI/CD.</li>
@@ -356,9 +374,12 @@
           <span class="magnetic">RAG / FAISS / IVF</span>
           <span class="magnetic">RAGAS</span>
           <span class="magnetic">LangChain / LangGraph</span>
+          <span class="magnetic">Agentic workflows / Tool use</span>
           <span class="magnetic">ViT / MAE</span>
           <span class="magnetic">OpenCV</span>
           <span class="magnetic">TensorRT / ONNX</span>
+          <span class="magnetic">TensorRT Edge-LLM / vLLM</span>
+          <span class="magnetic">Continuous batching / Chunked prefill</span>
           <span class="magnetic">NVIDIA DeepStream</span>
           <span class="magnetic">Dask / GeoPandas</span>
           <span class="magnetic">Kubernetes</span>
@@ -375,7 +396,7 @@
           <p class="section-eyebrow">06 · Contact</p>
           <h2>Let’s build AI that holds up in production.</h2>
           <p>
-            I’m interested in ambitious applied AI work across GenAI, retrieval, evaluation, computer vision, edge inference, and large-scale data platforms.
+            I’m interested in applied AI work across agentic systems, retrieval and evaluation, edge LLM inference, computer vision, and large-scale data platforms.
           </p>
           <div class="contact-actions">
             <a class="button button-primary" href="mailto:kpajmalrasi@gmail.com">Email me</a>
@@ -401,7 +422,7 @@
             "@id": "https://ajmalrasi.com/#website",
             "url": "https://ajmalrasi.com/",
             "name": "Ajmal Rasi",
-            "description": "Personal website of Ajmal Rasi, Senior Applied AI Engineer specializing in production GenAI, RAG, AI evaluation, distributed data platforms, computer vision, and edge AI.",
+            "description": "Personal website of Ajmal Rasi, Senior Applied AI Engineer building agentic RAG systems, edge LLM inference, computer vision, and data platforms.",
             "inLanguage": "en-IN",
             "publisher": { "@id": "https://ajmalrasi.com/#person" }
           },
@@ -413,7 +434,7 @@
             "isPartOf": { "@id": "https://ajmalrasi.com/#website" },
             "mainEntity": { "@id": "https://ajmalrasi.com/#person" },
             "about": { "@id": "https://ajmalrasi.com/#person" },
-            "dateModified": "2026-08-20T23:53:39+05:30",
+            "dateModified": "2026-09-25",
             "inLanguage": "en-IN"
           },
           {
@@ -423,7 +444,7 @@
             "givenName": "Ajmal",
             "familyName": "Rasi",
             "url": "https://ajmalrasi.com/",
-            "description": "Senior Applied AI Engineer specializing in production GenAI, multimodal RAG, AI evaluation, distributed data platforms, computer vision, and edge AI.",
+            "description": "Senior Applied AI Engineer building agentic RAG systems, edge LLM inference on NVIDIA Jetson, computer vision, and distributed data platforms.",
             "email": "mailto:kpajmalrasi@gmail.com",
             "jobTitle": "Senior Applied AI Engineer",
             "worksFor": { "@type": "Organization", "name": "TGS" },
@@ -436,7 +457,11 @@
             },
             "knowsAbout": [
               "Generative AI",
+              "Agentic AI",
               "Large Language Models",
+              "Edge LLM inference",
+              "Continuous batching",
+              "Chunked prefill",
               "Retrieval-Augmented Generation",
               "AI Evaluation and Observability",
               "Multimodal AI",

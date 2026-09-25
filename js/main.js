@@ -42,9 +42,9 @@ updateScrollState();
 
 const phrases = [
   "from retrieval to runtime.",
+  "with tools and evidence.",
   "for petabyte-scale data.",
-  "that see, reason, and scale.",
-  "from cloud to edge."
+  "from cloud to Jetson."
 ];
 const role = document.querySelector(".dynamic-role");
 const animateRole = !prefersReducedMotion && window.matchMedia("(min-width: 641px)").matches;
@@ -119,10 +119,10 @@ if (role && animateRole) {
 }
 
 const commands = [
-  "rag.evaluate --faithfulness",
+  "agent.run --tools --validate",
   "retrieve --index=ivf --multimodal",
-  "observe --traces --quality --cost",
-  "scale --pipeline=petabytes"
+  "edge-llm.serve --batch=2",
+  "rag.evaluate --faithfulness"
 ];
 const typedCommand = document.querySelector(".typed-command");
 let commandIndex = 0;
